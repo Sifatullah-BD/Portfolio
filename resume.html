@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic PDF Resume - Sifat Creative Studio</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+    <div class="resume-container" id="resume-content">
+        <!-- Header -->
+        <header class="resume-header">
+            <div class="header-content">
+                <h1>SIFAT ULLAH</h1>
+                <h2>Professional Graphic Designer & Brand Specialist</h2>
+                <div class="contact-info">
+                    <p>Phone: +8801785256367 | Telegram: @sifatonline2026</p>
+                    <p>LinkedIn: linkedin.com/in/sifat-ullah-01a744407/</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="resume-section">
+            <h3 class="section-title">Professional Summary</h3>
+            <p class="summary-text">A highly creative and dedicated Graphic Designer with over 3 years of experience specializing in Brand Identity, UI/UX Design, and Arabic Typography. Proven track record of delivering 150+ successful projects globally.</p>
+        </section>
+
+        <!-- Skills (Dynamic) -->
+        <section class="resume-section">
+            <h3 class="section-title">Technical Expertise</h3>
+            <div class="skills-grid" id="resume-skills">
+                <p>Loading skills dynamically from Supabase...</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Highlights (Dynamic) -->
+        <section class="resume-section">
+            <h3 class="section-title">Selected Portfolio Highlights</h3>
+            <div class="projects-list" id="resume-projects">
+                <p>Loading recent projects...</p>
+            </div>
+        </section>
+        
+        <!-- Workflow -->
+        <section class="resume-section">
+            <h3 class="section-title">Design Workflow</h3>
+            <ul class="workflow-list">
+                <li><strong>1. Analysis:</strong> Comprehensive understanding of brand requirements and target audience.</li>
+                <li><strong>2. Sketching:</strong> Developing raw concepts and structural wireframes.</li>
+                <li><strong>3. Vectorization:</strong> Crafting high-fidelity, scalable vector designs.</li>
+                <li><strong>4. Delivery:</strong> Finalizing assets with pixel-perfect precision and source files.</li>
+            </ul>
+        </section>
+
+        <footer class="resume-footer">
+            <p>Generated dynamically from Sifat Creative Studio live database | 2026</p>
+        </footer>
+    </div>
+
+    <!-- Supabase Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        const SUPABASE_URL = 'https://buaqwkrlgudbcwunccdn.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1YXF3a3JsZ3VkYmN3dW5jY2RuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzNTYxNzMsImV4cCI6MjA5NDkzMjE3M30.-wpaC3Cu2RRmCUsed9G0OFN9EIvxAhnxEwIdb1z7BFM';
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        async function loadResumeData() {
+            try {
+                // Fetch Projects
+                const { data: projects, error: pError } = await supabase.from('projects').select('*').limit(5);
+                
+                // If Supabase table isn't set up yet, fallback to localStorage mock logic
+                let projectList = projects;
+                if (pError) {
+                    console.warn("Supabase projects table not found, falling back to mock data.");
+                    const stored = localStorage.getItem('sifat_projects');
+                    projectList = stored ? JSON.parse(stored) : [
+                        { title: "Brand Identity", category: "branding" },
+                        { title: "UI Mockup", category: "ui" }
+                    ];
+                }
+
+                // Render Projects
+                const projectsContainer = document.getElementById('resume-projects');
+                projectsContainer.innerHTML = '';
+                if(projectList && projectList.length > 0) {
+                    projectList.forEach(p => {
+                        projectsContainer.innerHTML += `
+                            <div class="project-item">
+                                <strong>${p.title}</strong> - <span>${p.category.toUpperCase()}</span>
+                            </div>
+                        `;
+                    });
+                }
+
+                // Calculate Dynamic Skills based on project count
+                const counts = { branding: 0, ui: 0, social: 0, print: 0 };
+                projectList.forEach(p => {
+                    if (counts[p.category] !== undefined) counts[p.category]++;
+                    else counts[p.category] = 1;
+                });
+
+                // Base percentages + dynamic addition (e.g. 1 project = +5%)
+                const psSkill = Math.min(95, 70 + ((counts['social'] || 0) + (counts['print'] || 0)) * 5);
+                const aiSkill = Math.min(95, 65 + ((counts['branding'] || 0)) * 5);
+                const figSkill = Math.min(95, 50 + ((counts['ui'] || 0)) * 5);
+                const typoSkill = Math.min(95, 75 + ((counts['branding'] || 0)) * 3);
+
+                const skillsContainer = document.getElementById('resume-skills');
+                skillsContainer.innerHTML = `
+                    <div class="skill-item"><strong>Adobe Photoshop:</strong> ${psSkill}%</div>
+                    <div class="skill-item"><strong>Adobe Illustrator:</strong> ${aiSkill}%</div>
+                    <div class="skill-item"><strong>Figma / Canva:</strong> ${figSkill}%</div>
+                    <div class="skill-item"><strong>Typography & Branding:</strong> ${typoSkill}%</div>
+                `;
+
+                // Automatically trigger print dialog once data is rendered
+                setTimeout(() => {
+                    window.print();
+                }, 800);
+
+            } catch (err) {
+                console.error("Error loading resume data:", err);
+            }
+        }
+
+        window.addEventListener('load', loadResumeData);
+    </script>
+</body>
+</html>

@@ -1014,10 +1014,62 @@ renderFAQAccordion();
                 if (otherItem !== item && otherItem.classList.contains('active')) {
                     otherItem.classList.remove('active');
                 }
-            });
-            // Toggle clicked item
-            item.classList.toggle('active');
         });
     });
+
+    // 9. Supabase Backend Integration & Dynamic Skills
+    const SUPABASE_URL = 'https://buaqwkrlgudbcwunccdn.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1YXF3a3JsZ3VkYmN3dW5jY2RuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzNTYxNzMsImV4cCI6MjA5NDkzMjE3M30.-wpaC3Cu2RRmCUsed9G0OFN9EIvxAhnxEwIdb1z7BFM';
+    
+    if (window.supabase) {
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        async function fetchDynamicData() {
+            try {
+                // Fetch projects from Supabase
+                const { data: projects, error } = await supabase.from('projects').select('*');
+                let projectList = projects;
+                
+                // Fallback to local storage if DB is empty or table doesn't exist yet
+                if (error || !projects || projects.length === 0) {
+                    const stored = localStorage.getItem('sifat_projects');
+                    if (stored) {
+                        projectList = JSON.parse(stored);
+                    }
+                }
+
+                if (projectList && projectList.length > 0) {
+                    // Count categories
+                    const counts = { branding: 0, ui: 0, social: 0, print: 0, thumbnail: 0, other: 0 };
+                    projectList.forEach(p => {
+                        if (counts[p.category] !== undefined) counts[p.category]++;
+                        else counts[p.category] = 1;
+                    });
+
+                    // Calculate Dynamic Skills (Base % + increments per project)
+                    const psSkill = Math.min(98, 70 + ((counts['social'] || 0) + (counts['print'] || 0) + (counts['thumbnail'] || 0)) * 5);
+                    const aiSkill = Math.min(98, 65 + ((counts['branding'] || 0)) * 5);
+                    const figSkill = Math.min(98, 50 + ((counts['ui'] || 0)) * 5);
+                    const typoSkill = Math.min(98, 75 + ((counts['branding'] || 0)) * 3);
+
+                    // Update DOM Progress Bars
+                    const psBar = document.getElementById('skill-photoshop');
+                    const aiBar = document.getElementById('skill-illustrator');
+                    const figBar = document.getElementById('skill-figma');
+                    const typoBar = document.getElementById('skill-typography');
+
+                    if (psBar) { psBar.style.width = psSkill + '%'; psBar.parentElement.nextElementSibling.innerHTML += ` (${psSkill}%)`; }
+                    if (aiBar) { aiBar.style.width = aiSkill + '%'; aiBar.parentElement.nextElementSibling.innerHTML += ` (${aiSkill}%)`; }
+                    if (figBar) { figBar.style.width = figSkill + '%'; figBar.parentElement.nextElementSibling.innerHTML += ` (${figSkill}%)`; }
+                    if (typoBar) { typoBar.style.width = typoSkill + '%'; typoBar.parentElement.nextElementSibling.innerHTML += ` (${typoSkill}%)`; }
+                }
+            } catch (err) {
+                console.error("Error fetching dynamic backend data:", err);
+            }
+        }
+
+        // Call the fetch function
+        fetchDynamicData();
+    }
 
 });
