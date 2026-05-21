@@ -19,6 +19,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <span class="logo-accent">SIFAT.</span><span class="logo-sub">CREATIVE</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
     <!-- Antigravity Particle Canvas -->
     <canvas id="antigravity-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
 
@@ -41,6 +49,10 @@
             </nav>
             
             <div class="header-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
                 <a href="#contact" class="btn btn-outline nav-cta" id="nav-cta-btn">Start Project</a>
                 <button class="mobile-menu-toggle" id="menu-toggle-btn" aria-label="Toggle Menu">
                     <span class="bar"></span>
@@ -86,6 +98,10 @@
                         <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </a>
                     <a href="#contact" class="btn btn-secondary" id="hero-btn-contact">Hire Me</a>
+                    <a href="assets/portfolio.pdf" target="_blank" class="btn btn-outline" id="hero-btn-pdf" title="Download PDF Portfolio">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        PDF Portfolio
+                    </a>
                 </div>
                 <div class="scroll-indicator">
                     <a href="#stats" class="scroll-bounce-arrow" aria-label="Scroll Down">
@@ -216,6 +232,70 @@
                         Corporate business flyers, large format banners, clothing design mockups, and offline brand advertising assets created with professional print-ready standards.
                     </p>
                     <a href="#contact" class="btn-learn-more">Learn More <span>&rarr;</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How I Work (Workflow) Section -->
+    <section class="workflow-section" id="workflow">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How I <span class="highlight-orange">Work</span></h2>
+                <p class="section-description">A streamlined 4-step process from concept to final delivery.</p>
+            </div>
+            <div class="workflow-grid">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <h4 class="step-title">Requirement Analysis</h4>
+                    <p class="step-desc">Understanding your brand, target audience, and specific project needs.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <h4 class="step-title">Concept & Sketching</h4>
+                    <p class="step-desc">Brainstorming ideas and creating initial raw sketches or mood boards.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <h4 class="step-title">Vector Conversion</h4>
+                    <p class="step-desc">Digitizing sketches into high-quality, scalable vector designs.</p>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <h4 class="step-title">Final Delivery</h4>
+                    <p class="step-desc">Refining the artwork and delivering all required source files & assets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skillset Section -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical <span class="highlight-orange">Skillset</span></h2>
+                <p class="section-description">Tools and technologies I use to bring ideas to life.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4 class="skill-name">Adobe Photoshop</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+                    <p class="skill-level">Advanced (Photo Manipulation, Mockups)</p>
+                </div>
+                <div class="skill-card">
+                    <h4 class="skill-name">Adobe Illustrator</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                    <p class="skill-level">Intermediate (Vectors, Logos)</p>
+                </div>
+                <div class="skill-card">
+                    <h4 class="skill-name">Figma / Canva</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+                    <p class="skill-level">Basic (UI Design, Rapid Social Posts)</p>
+                </div>
+                <div class="skill-card">
+                    <h4 class="skill-name">Typography & Branding</h4>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                    <p class="skill-level">Advanced (Arabic Script, Custom Fonts)</p>
                 </div>
             </div>
         </div>
@@ -465,18 +545,27 @@
     <!-- ==================== FAQ SECTION ==================== -->
     <section class="faq-section" id="faq">
       <div class="container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
+        <h2 class="section-title">Frequently Asked <span class="highlight-orange">Questions</span></h2>
         <!-- Category filter buttons -->
-        <div class="faq-filter">
+        <div class="faq-filter" style="display:none;">
           <button class="faq-filter-btn active" data-category="all">All</button>
-          <button class="faq-filter-btn" data-category="pricing">Pricing</button>
-          <button class="faq-filter-btn" data-category="delivery">Delivery</button>
-          <button class="faq-filter-btn" data-category="revision">Revision</button>
-          <button class="faq-filter-btn" data-category="included">What's Included</button>
-          <button class="faq-filter-btn" data-category="contact">Contact</button>
         </div>
         <!-- Accordion container -->
-        <div class="faq-accordion" id="faq-accordion"></div>
+        <div class="faq-accordion" id="faq-accordion">
+            <!-- Hardcoded FAQs for instant load, can be overridden by JS Admin -->
+            <div class="faq-item">
+                <button class="faq-question">What is your typical project timeline? <span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>Depending on the scope, most logo and branding projects take between 3 to 7 days, including initial concepts and revisions.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What payment methods do you accept? <span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>I accept Skrill for international clients, and bKash, Nagad, or IBBL Bank Transfer for local clients in Bangladesh.</p></div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Do you provide source files? <span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>Yes, all finalized projects include high-resolution exports (PNG, JPEG) and the original source files (PSD, AI, EPS) depending on the project requirement.</p></div>
+            </div>
+        </div>
       </div>
     </section>
     
@@ -524,7 +613,7 @@
             </div>
             <div class="footer-divider"></div>
             <div class="footer-bottom">
-                <p class="copyright-text">&copy; 2026 Sifat Creative Studio. All Rights Reserved.</p>
+                <p class="copyright-text">Crafted with passion by Sifat Ullah | &copy; 2026</p>
                 <div class="footer-bottom-links">
                     <a href="#hero" class="footer-link">Home</a>
                     <a href="#services" class="footer-link">Services</a>

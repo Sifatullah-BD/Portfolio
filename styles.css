@@ -1791,3 +1791,229 @@ a {
     50% { transform: translateY(-10px); }
     100% { transform: translateY(5px); }
 }
+
+/* =========================================
+   BEGINNER TO PRO ENHANCEMENTS
+   ========================================= */
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.preloader-content {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--font-heading);
+}
+.loader-bar {
+    width: 100px;
+    height: 4px;
+    background: rgba(255,107,0,0.2);
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+.loader-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 50px;
+    height: 100%;
+    background: var(--accent);
+    animation: loadingBar 1s infinite ease-in-out;
+}
+@keyframes loadingBar {
+    0% { left: -50px; }
+    100% { left: 100px; }
+}
+
+/* Dark / Light Mode Toggle */
+.theme-btn {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+.theme-btn svg {
+    width: 24px;
+    height: 24px;
+}
+.theme-btn:hover {
+    color: var(--accent);
+}
+
+/* Light Mode Variables override */
+body.light-mode {
+    --bg-dark: #f8f9fa;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f1f3f5;
+    --text-light: #111111;
+    --text-muted: #495057;
+    --border-color: rgba(0, 0, 0, 0.1);
+}
+body.light-mode .hero-bg-glow {
+    background: radial-gradient(circle at top right, rgba(255,107,0,0.08) 0%, transparent 60%),
+                radial-gradient(circle at bottom left, rgba(128,0,128,0.05) 0%, transparent 50%);
+}
+body.light-mode .main-header.scrolled {
+    background: rgba(248, 249, 250, 0.8) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Workflow Section */
+.workflow-section {
+    padding: 100px 0;
+    background: var(--bg-dark);
+}
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.workflow-step {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    position: relative;
+    transition: 0.3s;
+}
+.workflow-step:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 107, 0, 0.1);
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+}
+.step-title {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+.step-desc {
+    font-size: 0.95rem;
+}
+
+/* Technical Skillset Section */
+.skills-section {
+    padding: 100px 0;
+    background: var(--bg-dark);
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.skill-card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+.skill-name {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+body.light-mode .skill-bar {
+    background: rgba(0,0,0,0.1);
+}
+.skill-progress {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 4px;
+    /* animation added via JS or left static */
+}
+.skill-level {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* FAQ Accordion */
+.faq-section {
+    padding: 100px 0;
+}
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background: var(--bg-card);
+    border: none;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+.faq-question:hover {
+    background: var(--bg-card-hover);
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: var(--bg-dark);
+    transition: max-height 0.4s ease;
+}
+.faq-answer p {
+    padding: 20px;
+    color: var(--text-muted);
+}
+.faq-item.active .faq-answer {
+    max-height: 200px; /* arbitrary large max height */
+}
+.faq-item.active .faq-question .faq-icon {
+    transform: rotate(45deg);
+    color: var(--accent);
+}
+.faq-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
