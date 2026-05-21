@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sifat Creative Studio | Premium Graphic Designer & Visual Creator</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="Official portfolio of Sifat Creative Studio. Specializing in high-end brand identity, social media graphics, YouTube thumbnails, logo design, and premium UI/UX concepts. Let's build your visual brand.">
+    <meta name="keywords" content="Graphic Designer Bangladesh, Sifat Creative Studio, Logo Designer BD, Branding Specialist, Social Media Designer, YouTube Thumbnail Designer Bangladesh, sifatonline">
+    <meta name="author" content="Sifat Ullah">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Antigravity Particle Canvas -->
+    <canvas id="antigravity-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+
+    <!-- Header / Navigation -->
+    <header class="main-header" id="site-header">
+        <div class="container header-container">
+            <a href="#" class="logo" id="logo-link">
+                <img src="assets/Sifat.png" alt="Sifat Creative Studio" class="logo-img" onerror="this.style.display='none'; document.getElementById('logo-text-fallback').style.display='inline-flex';">
+                <span id="logo-text-fallback" style="display: none;"><span class="logo-accent">SIFAT.</span><span class="logo-sub">CREATIVE</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-navigation">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#payments" class="nav-link">Payments</a></li>
+                    <li><a href="#contact" class="nav-link">Hire Me</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-outline nav-cta" id="nav-cta-btn">Start Project</a>
+                <button class="mobile-menu-toggle" id="menu-toggle-btn" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-overlay">
+        <ul class="mobile-nav-list">
+            <li><a href="#hero" class="mobile-link">Home</a></li>
+            <li><a href="#services" class="mobile-link">Services</a></li>
+            <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+            <li><a href="#payments" class="mobile-link">Payments</a></li>
+            <li><a href="#contact" class="mobile-link">Hire Me</a></li>
+            <li><a href="#contact" class="btn btn-primary mobile-cta">Start Project</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge-available" id="badge-freelance">
+                    <span class="pulse-dot"></span>
+                    Available for Freelance Projects
+                </div>
+                <h1 class="hero-title">
+                    I Create Modern <br>
+                    <span class="highlight-orange typewriter-text"></span><br>
+                    Helping Brands Stand Out.
+                </h1>
+                <p class="hero-subtitle">
+                    Transforming ideas into high-impact visual identities, custom brand elements, high-CTR YouTube thumbnails, and modern UI/UX layouts. Designed to captivate your audience.
+                </p>
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn btn-primary" id="hero-btn-portfolio">
+                        View Portfolio
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" id="hero-btn-contact">Hire Me</a>
+                </div>
+                <div class="scroll-indicator">
+                    <a href="#stats" class="scroll-bounce-arrow" aria-label="Scroll Down">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="avatar-card-wrapper">
+                    <div class="avatar-card">
+                        <img src="assets/sifatpp.png" alt="Sifat Ullah - Creative Director" class="avatar-image" id="avatar-img-main">
+                        <div class="avatar-badge">
+                            <span class="badge-title">Sifat Ullah</span>
+                            <span class="badge-subtitle">Visual Creator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="stats">
+        <div class="container stats-container">
+            <div class="stats-grid">
+                <div class="stat-card" id="stat-years">
+                    <div class="stat-number"><span class="highlight-orange">3+</span></div>
+                    <div class="stat-label">Years Creative Experience</div>
+                </div>
+                <div class="stat-card" id="stat-projects">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Successful Visual Projects</div>
+                </div>
+                <div class="stat-card" id="stat-clients">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction Rating</div>
+                </div>
+                <div class="stat-card" id="stat-response">
+                    <div class="stat-number">&lt; 1hr</div>
+                    <div class="stat-label">Rapid Response Time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Design <span class="highlight-orange">Expertise</span></h2>
+                <p class="section-description">Crafting sleek, pixel-perfect, and modern visual designs tailored to your business goals.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card" id="service-branding">
+                    <div class="service-icon-box">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-name">Branding & Logo Design</h3>
+                    <p class="service-details">
+                        Unique, memorable, and minimalist corporate logos and cohesive visual guidelines to represent your company values and leave a lasting impression.
+                    </p>
+                    <a href="#contact" class="btn-learn-more">Learn More <span>&rarr;</span></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card" id="service-social">
+                    <div class="service-icon-box">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-name">Social Media Creatives</h3>
+                    <p class="service-details">
+                        Engaging post designs, custom banners, restaurant promo flyers, and dynamic carousel slides to skyrocket your social media presence.
+                    </p>
+                    <a href="#contact" class="btn-learn-more">Learn More <span>&rarr;</span></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card" id="service-thumbnails">
+                    <div class="service-icon-box">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-name">High-CTR YouTube Thumbnails</h3>
+                    <p class="service-details">
+                        Custom-designed, highly engaging, and viral YouTube thumbnails with rich contrasts and bold typography to maximize your Click-Through Rate.
+                    </p>
+                    <a href="#contact" class="btn-learn-more">Learn More <span>&rarr;</span></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card" id="service-ui">
+                    <div class="service-icon-box">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-name">UI & Interactive Mockups</h3>
+                    <p class="service-details">
+                        Modern, dark-themed, and responsive web or mobile user interface (UI) mockups ready for web developers to code.
+                    </p>
+                    <a href="#contact" class="btn-learn-more">Learn More <span>&rarr;</span></a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card" id="service-print">
+                    <div class="service-icon-box">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                            <path d="M6 14h12v8H6z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-name">Banners & Corporate Prints</h3>
+                    <p class="service-details">
+                        Corporate business flyers, large format banners, clothing design mockups, and offline brand advertising assets created with professional print-ready standards.
+                    </p>
+                    <a href="#contact" class="btn-learn-more">Learn More <span>&rarr;</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured <span class="highlight-orange">Creations</span></h2>
+                <p class="section-description">Browse through my real, professional graphic design projects. Click on any work to view in high definition.</p>
+            </div>
+            
+            <!-- Portfolio Filter Controls -->
+            <div class="portfolio-filters" id="portfolio-tabs-container">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="branding">Branding & Sketch</button>
+                <button class="filter-btn" data-filter="social">Social & Marketing</button>
+                <button class="filter-btn" data-filter="print">Corporate & Print</button>
+                <button class="filter-btn" data-filter="motion">Motion Graphics</button>
+                <button class="filter-btn" data-filter="packaging">Packaging Design</button>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolio-items-grid">
+                <!-- Dynamically rendered via app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Payment Section -->
+    <section class="payments-section" id="payments">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Payment <span class="highlight-orange">Methods</span></h2>
+                <p class="section-description">Secure and convenient options for international and local payments. Click on any method to copy the details instantly.</p>
+            </div>
+            
+            <div class="payments-grid">
+                <!-- Skrill -->
+                <div class="payment-card" data-method="skrill" id="pay-skrill">
+                    <div class="payment-icon-wrapper">
+                        <span class="payment-icon text-skrill">S</span>
+                    </div>
+                    <h3 class="payment-name">Skrill</h3>
+                    <p class="payment-desc">Preferred for all international clients. Supports globally secure instant transfers.</p>
+                    <span class="payment-badge-status">International Preferred</span>
+                    <button class="btn btn-payment-action">View Payment Info</button>
+                </div>
+
+                <!-- bKash -->
+                <div class="payment-card" data-method="bkash" id="pay-bkash">
+                    <div class="payment-icon-wrapper">
+                        <div class="bkash-logo-circle">b</div>
+                    </div>
+                    <h3 class="payment-name">bKash</h3>
+                    <p class="payment-desc">Local instant mobile wallet payment in Bangladesh (Personal Number).</p>
+                    <span class="payment-badge-status">Personal Wallet</span>
+                    <button class="btn btn-payment-action">View Payment Info</button>
+                </div>
+
+                <!-- Nagad -->
+                <div class="payment-card" data-method="nagad" id="pay-nagad">
+                    <div class="payment-icon-wrapper">
+                        <div class="nagad-logo-circle">N</div>
+                    </div>
+                    <h3 class="payment-name">Nagad</h3>
+                    <p class="payment-desc">Local instant mobile financial service (Personal Number).</p>
+                    <span class="payment-badge-status">Personal Wallet</span>
+                    <button class="btn btn-payment-action">View Payment Info</button>
+                </div>
+
+                <!-- Bank Transfer -->
+                <div class="payment-card" data-method="bank" id="pay-bank">
+                    <div class="payment-icon-wrapper">
+                        <svg class="payment-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="22" width="18" height="2"/>
+                            <line x1="6" y1="18" x2="6" y2="11"/>
+                            <line x1="10" y1="18" x2="10" y2="11"/>
+                            <line x1="14" y1="18" x2="14" y2="11"/>
+                            <line x1="18" y1="18" x2="18" y2="11"/>
+                            <polygon points="12 2 2 7 22 7 12 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="payment-name">Bank Transfer</h3>
+                    <p class="payment-desc">Direct bank account deposits via IBBL (Islami Bank Bangladesh PLC).</p>
+                    <span class="payment-badge-status">Direct Bank Account</span>
+                    <button class="btn btn-payment-action">View Payment Info</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Info Modals Container -->
+    <div class="payment-modal-overlay" id="payment-modal">
+        <div class="payment-modal-card">
+            <button class="modal-close-btn" id="close-payment-modal" aria-label="Close Modal">&times;</button>
+            <div id="modal-content-area">
+                <!-- Content injected dynamically via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Direct Onboarding Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-bg-lines"></div>
+        <div class="container contact-container">
+            <div class="contact-info-panel">
+                <h2 class="section-title">Start a <span class="highlight-orange">Project</span></h2>
+                <p class="contact-panel-desc">
+                    Let's collaborate! Answer a few short questions to estimate your budget and immediately initiate your design order directly via WhatsApp or Telegram.
+                </p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </span>
+                        <div>
+                            <span class="contact-label">Send an Email</span>
+                            <a href="mailto:sifatmahmud485@gmail.com" class="contact-val">sifatmahmud485@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        </span>
+                        <div>
+                            <span class="contact-label">WhatsApp Business</span>
+                            <a href="https://wa.me/8801785256367" target="_blank" class="contact-val">+880 1785-256367</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 22 12 17 22 22 12 2"></polygon></svg>
+                        </span>
+                        <div>
+                            <span class="contact-label">Telegram Channel</span>
+                            <a href="https://t.me/sifatonline2026" target="_blank" class="contact-val">@sifatonline2026</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 18H7V6h5a3 3 0 0 1 0 6H7m0 0h5a3 3 0 0 1 0 6z"></path>
+                                <path d="M17 14h5a2.5 2.5 0 0 0-5 0v0a2.5 2.5 0 0 0 5 0"></path>
+                                <path d="M17 8h5"></path>
+                            </svg>
+                        </span>
+                        <div>
+                            <span class="contact-label">Behance Portfolio</span>
+                            <a href="https://www.behance.net/sifatmahmud14" target="_blank" class="contact-val">behance.net/sifatmahmud14</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Badges -->
+                <div class="social-badges-row">
+                    <a href="https://www.facebook.com/profile.php?id=100086595317990" target="_blank" class="social-badge-icon" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sifat-ullah-01a744407/" target="_blank" class="social-badge-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@AdventureTech-c2q" target="_blank" class="social-badge-icon" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                    </a>
+                    <a href="https://www.behance.net/sifatmahmud14" target="_blank" class="social-badge-icon" aria-label="Behance">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 18H7V6h5a3 3 0 0 1 0 6H7m0 0h5a3 3 0 0 1 0 6z"></path>
+                            <path d="M17 14h5a2.5 2.5 0 0 0-5 0v0a2.5 2.5 0 0 0 5 0"></path>
+                            <path d="M17 8h5"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="contact-form-wrapper">
+                <form class="order-form" id="project-order-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="client-name">Your Name</label>
+                            <input type="text" id="client-name" name="name" required placeholder="e.g., John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="client-brand">Brand / Company Name</label>
+                            <input type="text" id="client-brand" name="brand" placeholder="e.g., Acme Corp (Optional)">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service-type">Required Service</label>
+                        <select id="service-type" name="service" required>
+                            <option value="logo" data-base-price="50">Logo Design (Base $50)</option>
+                            <option value="branding" data-base-price="120">Branding Identity Package (Base $120)</option>
+                            <option value="social" data-base-price="35">Social Media Post/Banner (Base $35)</option>
+                            <option value="thumbnail" data-base-price="25">High-CTR YouTube Thumbnail (Base $25)</option>
+                            <option value="ui" data-base-price="150">UI / UX Landing Page Mockup (Base $150)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-scale">Quantity / Scale</label>
+                        <div class="scale-slider-container">
+                            <input type="range" id="project-scale" name="scale" min="1" max="10" value="1" class="scale-range-slider">
+                            <div class="scale-values">
+                                <span class="scale-item-desc">Quantity: <strong id="scale-indicator-label">1 Item</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Estimated Project Cost</label>
+                        <div class="cost-estimate-hud" id="cost-estimate-hud-display">$50.00</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-details">Project Description / Brief</label>
+                        <textarea id="project-details" name="details" rows="4" required placeholder="Briefly describe what you need (colors, style, references)..."></textarea>
+                    </div>
+                    
+                    <div class="form-group action-radio-group">
+                        <label>Preferred Contact Channel for Delivery</label>
+                        <div class="radio-options">
+                            <label class="radio-card active">
+                                <input type="radio" name="contact_method" value="whatsapp" checked>
+                                <span class="radio-label-text">WhatsApp</span>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="contact_method" value="telegram">
+                                <span class="radio-label-text">Telegram</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit-order" id="order-submit-btn">
+                        Submit & Launch Order Chat
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    
+    <!-- ==================== FAQ SECTION ==================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <!-- Category filter buttons -->
+        <div class="faq-filter">
+          <button class="faq-filter-btn active" data-category="all">All</button>
+          <button class="faq-filter-btn" data-category="pricing">Pricing</button>
+          <button class="faq-filter-btn" data-category="delivery">Delivery</button>
+          <button class="faq-filter-btn" data-category="revision">Revision</button>
+          <button class="faq-filter-btn" data-category="included">What's Included</button>
+          <button class="faq-filter-btn" data-category="contact">Contact</button>
+        </div>
+        <!-- Accordion container -->
+        <div class="faq-accordion" id="faq-accordion"></div>
+      </div>
+    </section>
+    
+
+    <!-- Global Fullscreen Image Lightbox Modal -->
+    <div class="lightbox-overlay" id="global-lightbox">
+        <button class="lightbox-close-btn" id="close-lightbox" aria-label="Close Image Preview">&times;</button>
+        <button class="lightbox-nav-btn prev-btn" id="lightbox-prev" aria-label="Previous Project">&#10094;</button>
+        <div class="lightbox-content-wrapper">
+            <img src="" alt="" class="lightbox-active-img" id="lightbox-img-element">
+            <div class="lightbox-info-hud">
+                <span class="lightbox-tag-hud" id="lightbox-tag-field">Branding</span>
+                <h3 class="lightbox-title-hud" id="lightbox-title-field">Project Title</h3>
+            </div>
+        </div>
+        <button class="lightbox-nav-btn next-btn" id="lightbox-next" aria-label="Next Project">&#10095;</button>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client <span class="highlight-orange">Stories</span></h2>
+                <p class="section-description">What my amazing clients say about their new visual identities.</p>
+            </div>
+            
+            <div class="testimonials-slider-container">
+                <div class="testimonials-track" id="testimonials-track">
+                    <!-- Cards will be populated by JS -->
+                </div>
+                <div class="testimonials-dots" id="testimonials-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <a href="#" class="logo footer-logo" id="footer-logo-link">
+                    <img src="assets/Sifat.png" alt="Sifat Creative Studio" class="logo-img footer-logo-img" onerror="this.style.display='none'; document.getElementById('footer-logo-text-fallback').style.display='inline-flex';">
+                    <span id="footer-logo-text-fallback" style="display: none;"><span class="logo-accent">SIFAT.</span><span class="logo-sub">CREATIVE</span></span>
+                </a>
+                <p class="footer-tagline">Making brands visual, modern, and memorable.</p>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; 2026 Sifat Creative Studio. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#hero" class="footer-link">Home</a>
+                    <a href="#services" class="footer-link">Services</a>
+                    <a href="#portfolio" class="footer-link">Portfolio</a>
+                    <a href="https://www.behance.net/sifatmahmud14" target="_blank" class="footer-link">Behance</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Interactive Logic -->
+    <script src="app.js"></script>
+<!-- Admin Passcode Modal -->
+<div class="payment-modal-overlay" id="admin-passcode-modal">
+  <div class="payment-modal-card">
+    <button class="modal-close-btn" id="close-passcode-modal" aria-label="Close Modal">&times;</button>
+    <div class="modal-header-block">
+      <h3 class="modal-title">Admin Access</h3>
+    </div>
+    <div class="modal-info-panel">
+      <div class="modal-data-row">
+        <span class="modal-data-label">Enter Passcode</span>
+        <div class="modal-data-value-box">
+          <input type="password" id="admin-passcode-input" style="flex:1;padding:8px;background:rgba(0,0,0,0.2);border:none;color:var(--text-light);" placeholder="Passcode">
+          <button class="btn btn-primary" id="admin-passcode-submit" style="margin-left:8px;">Enter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Admin Dashboard Modal -->
+<div class="payment-modal-overlay" id="admin-dashboard-modal">
+  <div class="payment-modal-card" style="max-width:600px;overflow:auto;max-height:90vh;">
+    <button class="modal-close-btn" id="close-dashboard-modal" aria-label="Close Modal">&times;</button>
+    <div class="modal-header-block">
+      <h3 class="modal-title">Portfolio Admin Dashboard</h3>
+    </div>
+    <div class="modal-info-panel" style="margin-bottom:24px;">
+      <h4>Add New Project</h4>
+      <div class="modal-data-row">
+        <span class="modal-data-label">Title</span>
+        <input type="text" id="admin-new-title" style="width:100%;padding:6px;background:rgba(0,0,0,0.2);border:none;color:var(--text-light);" placeholder="Project Title">
+      </div>
+      <div class="modal-data-row">
+        <span class="modal-data-label">Category</span>
+        <select id="admin-new-category" style="width:100%;padding:6px;background:rgba(0,0,0,0.2);border:none;color:var(--text-light);">
+          <option value="branding">Branding</option>
+          <option value="social">Social</option>
+          <option value="print">Print</option>
+          <option value="ui">UI</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="modal-data-row">
+        <span class="modal-data-label">Image</span>
+        <input type="file" id="admin-new-image" accept="image/*" style="width:100%;color:var(--text-light);">
+      </div>
+      <button class="btn btn-primary" id="admin-add-project" style="margin-top:12px;">Add Project</button>
+    </div>
+    <hr style="border-color:var(--border-color);margin:16px 0;">
+    <div class="modal-info-panel">
+      <h4>Existing Projects</h4>
+      <ul id="admin-project-list" style="list-style:none;padding:0;margin:0;">
+        <!-- List will be populated by JS -->
+      </ul>
+    </div>
+    <hr style="border-color:var(--border-color);margin:16px 0;">
+    <div class="modal-info-panel">
+      <h4>Export Configuration</h4>
+      <textarea id="admin-export-area" style="width:100%;height:120px;background:rgba(0,0,0,0.2);border:none;color:var(--text-light);padding:8px;resize:none;" readonly></textarea>
+      <button class="btn btn-primary" id="admin-copy-export" style="margin-top:8px;">Copy to Clipboard</button>
+        <!-- Blog Post Management -->
+        <div class="modal-info-panel" style="margin-top:24px;">
+          <h4>Blog Posts</h4>
+          <div class="modal-data-row">
+            <span class="modal-data-label">Title</span>
+            <input type="text" id="admin-new-post-title" style="width:100%;padding:6px;background:rgba(0,0,0,0.2);border:none;color:var(--text-light);" placeholder="Post Title" />
+          </div>
+          <div class="modal-data-row" style="margin-top:8px;">
+            <span class="modal-data-label">Content</span>
+            <textarea id="admin-new-post-content" style="width:100%;height:80px;padding:6px;background:rgba(0,0,0,0.2);border:none;color:var(--text-light);" placeholder="Post Content"></textarea>
+          </div>
+          <button class="btn btn-primary" id="admin-add-post" style="margin-top:8px;">Add Post</button>
+          <ul id="admin-post-list" style="list-style:none;padding:0;margin-top:12px;"></ul>
+        </div>
+        <hr style="border-color:var(--border-color);margin:16px 0;" />
+        <!-- Resource Upload Management -->
+        <div class="modal-info-panel" style="margin-top:24px;">
+          <h4>Resources (Fonts, Images, Elements)</h4>
+          <div class="modal-data-row">
+            <span class="modal-data-label">Upload File</span>
+            <input type="file" id="admin-resource-input" accept="*/*" style="width:100%;color:var(--text-light);" />
+          </div>
+          <button class="btn btn-primary" id="admin-add-resource" style="margin-top:8px;">Add Resource</button>
+          <ul id="admin-resource-list" style="list-style:none;padding:0;margin-top:12px;"></ul>
+        
+        <!-- FAQ Management Section -->
+        <div class="modal-info-panel" style="margin-top:24px;">
+          <h4>FAQ Management</h4>
+          <div class="modal-data-row">
+            <span class="modal-data-label">Question</span>
+            <input type="text" id="admin-faq-question" style="width:100%;padding:6px;background:rgba(0,0,0,0.2);border:none;color:var(--text-light);" placeholder="FAQ Question" />
+          </div>
+          <div class="modal-data-row" style="margin-top:8px;">
+            <span class="modal-data-label">Answer</span>
+            <textarea id="admin-faq-answer" style="width:100%;height:80px;padding:6px;background:rgba(0,0,0,0.2);border:none;color:var(--text-light);" placeholder="FAQ Answer"></textarea>
+          </div>
+          <div class="modal-data-row" style="margin-top:8px;">
+            <span class="modal-data-label">Category</span>
+            <select id="admin-faq-category" style="width:100%;padding:6px;background:rgba(0,0,0,0.2);border:none;color:var(--text-light);">
+              <option value="pricing">Pricing</option>
+              <option value="delivery">Delivery</option>
+              <option value="revision">Revision</option>
+              <option value="included">What's Included</option>
+              <option value="contact">Contact</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" id="admin-add-faq" style="margin-top:8px;">Add FAQ</button>
+          <ul id="admin-faq-list" style="list-style:none;padding:0;margin-top:12px;">
+          </ul>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="mouse-dot"></div>
+
+<!-- Toast Notification -->
+<div class="toast-notification" id="toast-msg">Success!</div>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/8801785256367" target="_blank" class="floating-wa-btn" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+</body>
+
+</html>

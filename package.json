@@ -1,0 +1,11 @@
+{
+  "name": "sifat-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio site with admin portal",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve"
+  },
+  "author": "Sifat Ullah",
+  "license": "MIT"
+}
